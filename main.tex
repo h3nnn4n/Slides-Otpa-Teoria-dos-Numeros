@@ -5,18 +5,17 @@
 \usepackage[T1]{fontenc}
 \usepackage{booktabs}
 \usepackage[portuges]{babel}
+\usepackage{algorithm,algpseudocode}
 
 
-\title[Modelo Slides Udesc]{Modelo de slides UDESC}
+\title[Teoria dos números]{Teoria dos números}
 
-\author[Rafael Castro, Renan S. Silva]{
-    Rafael Castro, Renan S. Silva\\\medskip
-    {\small \url{rafaelcgs10@gmail.com}} \\ 
+\author[Renan S. Silva]{\medskip
 {\small \url{uber.renan@gmail.com}}}
 
-\institute[UDESC]{
-    Departamento de Ci\^encia da Computa\c{c}\~ao \\
-    Centro de Ci\^encias e Tecnol\'ogias\\
+\institute[UDESC]
+{Departamento de Ci\^encia da Computa\c{c}\~ao \\
+Centro de Ci\^encias e Tecnol\'ogias\\
 Universidade do Estado de Santa Catarina}
 
 \begin{document}
@@ -26,26 +25,221 @@ Universidade do Estado de Santa Catarina}
 
 \end{frame}
 
-\section{Isso é uma seção}
+\section{Introdução}
 \begin{frame}
-    \frametitle{Hitórico}
+    \frametitle{Teoria dos Números}
 
     \begin{itemize}
-        \item Alguma data: O Castro fez o modelo;
-        \item 11/11: O Renan tirou as coisas velhas e fez um make file supimpa.
+        \item Antigamente era chamada de Aritmética;
+        \item Iniciou com Euclides em 300 B.C;
+        \item Estuda os números inteiros;
+        \item Atualmente possui aplicações diretas em criptografia;
+            \begin{itemize}
+                \item Diffie-Hellman;
+                \item RSA; \item Cusvas Ellipticas; \end{itemize}
     \end{itemize}
 \end{frame}
 
-\section{Isso é outra seção}
+\section{Números Primos}
 \begin{frame}
-    \frametitle{Isso é um titulo}
+    \frametitle{Números Primos}
 
-    Isso é um texto.
     \begin{itemize}
-        \item Isso é um item;
-        \item PogChamp;
-        \item Kappa;
-        \item KTHXBYE;
+        \item Um número natural $n > 1$ é dito primo se ele é divisível apenas por $1$ e $n$;
+        \item Pode-se dizer ainda que se $p$ é primo, para $p=a * b, a\text{ e }b \in \mathbb{N}, a < b$, segue que $a=1$ e $b = p$;
+        \item $1$ não é primo;
+        \item $0$ não é primo;
+        \item Existem infinitos números primos;
+        \item Teorema fundamental da aritimética;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Testando números primos}
+
+    Três abordagens:
+    \begin{itemize}
+        \item Teste de força bruta (ver código);
+        \item Miller-Rabin;
+        \item Crivo (ver outro código);
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fatores primos}
+
+    \begin{center}
+        \Huge Código tosco;
+    \end{center}
+\end{frame}
+
+\section{Divisibilidade}
+\begin{frame}
+    \frametitle{Divisibilidade}
+
+    \begin{itemize}
+        \item $a$ divide $b$, denotado por $a \textbar b$, se $\exists b \in \mathbb{N}$ tal que $a = kb$;
+        \item Segue que qualquer número possui $1$ como seu menor divisor;
+        \item Baseado na fatoração prima de pode-se construir a lista de todos os divisores de um número;
+        \item Todo número $n \in \mathbb{N}$ pode ser escrito de forma única como $n = p_1^{a_1} *p_2^{a_2} * p_3^{a_3} * \ldots * p_m^{a_m}$, onde $p_i$ é o $i$-ésimo primo;
+        \item O total de fatores de um número é dado por $\prod_{i = 1}^m (a_i + 1)$;
+        \item Exemplo;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Maior divisor comum, MDC ou GCD}
+
+    \begin{itemize}
+        \item O GDC de $x$ e $y$ é o maior natural $k$ tal que $x=k*a$ e $y=k*b$, para algum $a,b \in \mathbb{N}$;
+        \item Denotado por $gdc(x, y)$;
+        \item Se $gdc(x, y) = 1$, então $x$ e $y$ são primos relativos;
+        \item Se $x \textbar y$, $gdc(x, y) = x$;
+        \item Se $a = bt + r$ para $t,r \in \mathbb{N}$, então $gcd(a, b) = gcd(b, r)$;
+        \item Com base nas observações acima, Eclides apresentou o que é aceito por muitos como o primeiro algoritmo da história: O algoritmo de euclides;
+        \item Código;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1; \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{titulo}
+
+    \begin{itemize}
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
+        \item 1;
     \end{itemize}
 \end{frame}
 
