@@ -6,7 +6,9 @@
 \usepackage{booktabs}
 \usepackage[portuges]{babel}
 \usepackage{algorithm,algpseudocode}
+\usepackage{amsmath}
 
+\newcommand{\Mod}[1]{\ (\text{mod}\ #1)}
 
 \title[Teoria dos números]{Teoria dos números}
 
@@ -134,116 +136,57 @@ Universidade do Estado de Santa Catarina}
 
     \begin{itemize}
         \item É uma forma de representar a aritmética modular;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
+        \item Por definição $a \equiv b \Mod{n}$ se $n \textbar (a - b)$;
+        \item Se $a \mod n = b$ então $a \equiv b \Mod{n}$;
+        \item Se $a \equiv b \Mod{n}$ e $c \equiv d \Mod{n}$ então $(a + c) \equiv (b + d) \Mod{n}$;
+        \item Adição é uma adição com números negativos;
+        \item Se $a \equiv b \Mod{n}$ então $a*d \equiv b*d \Mod{n}$
+        \item Se $a \equiv b \Mod{n}$ e $c \equiv d \Mod{n}$ então $(a * c) \equiv (b * d) \Mod{n}$;
+        \item Quando que $2*x \equiv 3 \Mod{9}$? E $2*x \equiv 3 \Mod{4}$?
     \end{itemize}
 \end{frame}
 
+\section{Equações Diofantinas}
 \begin{frame}
-    \frametitle{titulo}
+    \frametitle{Equações Diofantinas}
 
     \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
+        \item São equações com o dominio limitado aos inteiros;
+        \item $a^n + b^n = c^n$;
+        \item Divisão é um problema;
+        \item Décimo problema de Hilbert;
+        \item Algumas possuem solução polinomial:
+            \begin{itemize}
+                \item $ax - ny = b$;
+                \item $x^2 - ny^2 = \pm 1$;
+            \end{itemize}
     \end{itemize}
 \end{frame}
 
+\section{Problemas}
 \begin{frame}
-    \frametitle{titulo}
+    \frametitle{Problemas do URI}
 
-    \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{titulo}
-
-    \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{titulo}
-
-    \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{titulo}
-
-    \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{titulo}
-
-    \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{titulo}
-
-    \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{titulo}
-
-    \begin{itemize}
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-        \item 1;
-    \end{itemize}
+    \begin{minipage}{.4\textwidth}
+        URI
+        \begin{itemize}
+            \item 1381;
+            \item 1807;
+            \item 1221;
+            \item 1760;
+            \item 1308;
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        Project Euler
+        \begin{itemize}
+            \item 66 Equação Diofantina;
+            \item 108 Equação Diofantina;
+            \item 110 Equações Diofantina;
+            \item 142 Relações entre números;
+            \item 97; Powermod
+        \end{itemize}
+    \end{minipage}
 \end{frame}
 
 \end{document}
